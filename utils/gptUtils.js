@@ -1,8 +1,8 @@
 import OpenAI from "openai";
-import { DevEnvironment } from '../environment/Dev.js';
+//import { DevEnvironment } from '../environment/Dev.js';
 
 const openai = new OpenAI({
-  apiKey: DevEnvironment.openaiAPIKey,
+  apiKey: process.env.openaiAPIKey
 });
 
 export const makeChatRequest = async (messages, chatOptions) => {
